@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Data</title>
+</head>
+<body>
+    <h1>Traffic Data for Intersections</h1>
+    <table border="1">
+        <tr>
+            <th>Intersection</th>
+            <th>Traffic Counts</th>
+        </tr>
+        {% for intersection, counts in data.items() %}
+        <tr>
+            <td>{{ intersection }}</td>
+            <td>{{ counts }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
